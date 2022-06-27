@@ -14,6 +14,12 @@ RUN useradd --uid 1000 --create-home --home-dir /home/gnuhealth gnuhealth
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends \
         patch \
+        g++ \
+        make \
+        nodejs \
+        npm \
+        git \
+        lsb-release \
         vim \
         wget && \
     wget -q  --output-document=/tmp/gnuhealth.tgz "${GNUHEALTH_PACKAGE}" && \
